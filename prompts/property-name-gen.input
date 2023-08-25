@@ -1,0 +1,2 @@
+Query: {{ query }}
+Entities:{% for q_name, qid in qid_list_tuples %}{{ q_name }} with QID {{ qid }}; {% endfor %}

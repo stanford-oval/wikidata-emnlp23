@@ -1,0 +1,1 @@
+Given a Wikidata query with resolved entities, generate the corresponding SPARQL. Use property names instead of PIDs.
