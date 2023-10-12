@@ -3720,6 +3720,11 @@
       "instruction": "Given a Wikidata query with resolved entities, generate the corresponding SPARQL. Use property names instead of PIDs."
     },
     {
+      "input": "Query: what was wrong with joan crawford?\nEntities:Joan Crawford with QID Q40475;",
+      "output": "SELECT DISTINCT ?x WHERE { wd:40475 wdt:medical_condition ?x. }",
+      "instruction": "Given a Wikidata query with resolved entities, generate the corresponding SPARQL. Use property names instead of PIDs."
+    },
+    {
       "input": "Query: what country was anton van leeuwenhoek from?\nEntities:Antoni van Leeuwenhoek with QID Q43522;",
       "output": "SELECT DISTINCT ?x WHERE { wd:Q43522 wdt:place_of_birth ?p. ?p wdt:country ?x. }",
       "instruction": "Given a Wikidata query with resolved entities, generate the corresponding SPARQL. Use property names instead of PIDs."
