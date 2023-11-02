@@ -1,3 +1,5 @@
+**Note: Repo under development. We have released all data and are now working on releasing models and evaluation code**
+
 # Repo structure
 
 - Training data for all models published in our paper can be found under directory `training_data`;
