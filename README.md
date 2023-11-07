@@ -36,4 +36,4 @@ curl https://almond-static.stanford.edu/research/qald/refined-finetune/model.pt 
 curl https://almond-static.stanford.edu/research/qald/refined-finetune/precomputed_entity_descriptions_emb_wikidata_33831487-300.np -o <your_directory>/precomputed_entity_descriptions_emb_wikidata_33831487-300.np
 ```
 
-and then check out `run_refined.py` for an example of how to inference.
+and then check out `run_refined.py` for an example of inferencing with it.
