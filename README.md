@@ -19,3 +19,21 @@ The JSON file names correspond to the models in our paper in the following way:
 - `no_mention_refined` refers to the model named `No mentions, trained with ReFinED` in Section 6.2 (Table 2);
 
 - `original_query_format` refers to the model named `Original SPARQL` in Section 6.3 (Table 3).
+
+# Inference
+
+**This section is under development.**
+
+## Running NED model
+
+Download the finetuned ReFiNED model by:
+
+```
+pip install https://github.com/amazon-science/ReFinED/archive/refs/tags/V1.zip 
+mkdir -p <your_directory>
+curl https://almond-static.stanford.edu/research/qald/refined-finetune/config.json -o <your_directory>/config.json
+curl https://almond-static.stanford.edu/research/qald/refined-finetune/model.pt -o <your_directory>/model.pt
+curl https://almond-static.stanford.edu/research/qald/refined-finetune/precomputed_entity_descriptions_emb_wikidata_33831487-300.np -o <your_directory>/precomputed_entity_descriptions_emb_wikidata_33831487-300.np
+```
+
+and then check out `run_refined.py` for an example of how to inference.
