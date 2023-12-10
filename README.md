@@ -20,6 +20,14 @@ The JSON file names correspond to the models in our paper in the following way:
 
 - `original_query_format` refers to the model named `Original SPARQL` in Section 6.3 (Table 3).
 
+# Evaluation
+
+To run evaluation on the dev set, prepare your prediction file in the same format as `predicted_results/best.json`, and supply it as the first parameter
+for `execute_predictions("predicted_results/best.json", "WikiWebQuestions/dev.json")` in `eval_predictions.py`.
+Then, run `python eval_predictions.py`.
+
+If running on the test set, also change the second parameter to `"WikiWebQuestions/test.json"`
+
 # Inference
 
 **This section is under development.**
