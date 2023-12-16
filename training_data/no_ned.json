@@ -1,5 +1,12 @@
 [
     {
+        "input": "Query: what is the name of justin bieber brother?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:justin_bieber wdt:sibling ?x. ?x wdt:sex_or_gender wd:male. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-0",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q34086 wdt:P3373 ?x. ?x wdt:P21 wd:Q6581097. }"
+    },
+    {
         "input": "Query: what character did natalie portman play in star wars?",
         "output": "SELECT DISTINCT ?x WHERE { ?p wdt:media_franchise wd:star_wars; p:cast_member ?y. ?y ps:cast_member wd:natalie_portman; pq:character_role ?x. }",
         "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
@@ -10836,13 +10843,6 @@
         "sparql": "SELECT DISTINCT ?x WHERE { wd:Q142 wdt:P6 ?x. }"
     },
     {
-        "input": "Query: what is the name of justin bieber brother?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:justin_bieber wdt:sibling ?x. ?x wdt:sex_or_gender wd:male. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-0",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q34086 wdt:P3373 ?x. ?x wdt:P21 wd:Q6581097. }"
-    },
-    {
         "input": "Query: who did alf's voice?",
         "output": "SELECT DISTINCT ?x WHERE { ?p p:voice_actor ?y. ?y ps:voice_actor ?x; pq:character_role wd:alf. }",
         "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
@@ -13930,13 +13930,6 @@
         "sparql": "SELECT DISTINCT ?x WHERE { wd:Q252 wdt:P37 ?x. }"
     },
     {
-        "input": "Query: what currency is used in hungary?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:hungary wdt:currency ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2700",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q28 wdt:P38 ?x. }"
-    },
-    {
         "input": "Query: what type of political system is headed by queen elizabeth ii?",
         "output": "SELECT DISTINCT ?x WHERE { ?y wdt:instance_of/wdt:subclass_of* wd:country; p:head_of_state ?p. ?p ps:head_of_state wd:elizabeth_ii; wdt:basic_form_of_government ?x. }",
         "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
@@ -13944,18 +13937,746 @@
         "sparql": "SELECT DISTINCT ?x WHERE { ?y wdt:P31 wd:Q6256; p:P35 ?p. ?p ps:P35 wd:Q9682; wdt:P122 ?x. }"
     },
     {
-        "input": "Query: what currency do they use in qatar?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:qatar wdt:currency ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2701",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q846 wdt:P38 ?x. }"
-    },
-    {
         "input": "Query: what is the actual current local time now in uk?",
         "output": "SELECT DISTINCT ?x WHERE { wd:Q145 wdt:located_in_time_zone ?x. }",
         "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
         "id": "WebQTrn-2560",
         "sparql": "SELECT DISTINCT ?x WHERE { wd:Q145 wdt:P421 ?x. }"
+    },
+    {
+        "input": "Query: what are some of the awards taylor swift has won?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:taylor_swift wdt:award_received ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2561",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q26876 wdt:P166 ?x. }"
+    },
+    {
+        "input": "Query: where did chris cuomo go?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:cuomo wdt:educated_at ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2563",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q11673 wdt:P69 ?x. }"
+    },
+    {
+        "input": "Query: where did gary coleman live when he died?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:gary_coleman wdt:place_of_death ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2564",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q313367 wdt:P20 ?x. }"
+    },
+    {
+        "input": "Query: what is there to do in palm springs?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:tourist_attraction; wdt:located_in_the_administrative_territorial_entity wd:palm_springs. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2565",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31/wdt:P279* wd:Q570116; wdt:P131 wd:Q488004. }"
+    },
+    {
+        "input": "Query: where is auburn university at?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:auburn_university wdt:located_in_the_administrative_territorial_entity ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2566",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q540672 wdt:P131 ?x. }"
+    },
+    {
+        "input": "Query: where was ronald reagan born and raised?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:ronald_reagan wdt:place_of_birth ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2567",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q9960 wdt:P19 ?x. }"
+    },
+    {
+        "input": "Query: what county is morristown tn in?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:morristown wdt:located_in_the_administrative_territorial_entity ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2568",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q962499 wdt:P131 ?x. }"
+    },
+    {
+        "input": "Query: where do the houston rockets play basketball?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:houston_rockets wdt:home_venue ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2569",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q161345 wdt:P115 ?x. }"
+    },
+    {
+        "input": "Query: who was the president of the united states during ww2?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x p:position_held ?p. ?p ps:position_held wd:president_of_the_united_states; pq:start_time ?y. wd:world_war_ii wdt:start_time ?w; wdt:end_time ?v. FILTER(((?y >= ?w) && (?y <= ?v))) }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2570",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x p:P39 ?p. ?p ps:P39 wd:Q11696; pq:P580 ?y. wd:Q362 wdt:P580 ?w; wdt:P582 ?v. FILTER(((?y >= ?w) && (?y <= ?v))) }"
+    },
+    {
+        "input": "Query: which states does the connecticut river flow through?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:connecticut_river wdt:located_in_the_administrative_territorial_entity+ ?x. ?x wdt:instance_of/wdt:subclass_of* wd:federated_state. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2572",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q379648 wdt:P131+ ?x. ?x wdt:P31/wdt:P279* wd:Q107390. }"
+    },
+    {
+        "input": "Query: what are the biggest cities in illinois?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:city; wdt:located_in_the_administrative_territorial_entity+ wd:illinois; wdt:population ?y. } ORDER BY DESC (?y) LIMIT 1",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2573",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31/wdt:P279* wd:Q515; wdt:P131+ wd:Q1204; wdt:P1082 ?y. } ORDER BY DESC (?y) LIMIT 1"
+    },
+    {
+        "input": "Query: which province in canada is the most populated?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:province_of_canada; wdt:population ?y. } ORDER BY DESC (?y) LIMIT 1",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2575",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31 wd:Q11828004; wdt:P1082 ?y. } ORDER BY DESC (?y) LIMIT 1"
+    },
+    {
+        "input": "Query: what continent do the falkland islands belong to?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:falkland_islands wdt:continent ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2576",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q9648 wdt:P30 ?x. }"
+    },
+    {
+        "input": "Query: what language do russian people speak?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:russia wdt:official_language ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2577",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q159 wdt:P37 ?x. }"
+    },
+    {
+        "input": "Query: what did alvin smith died from?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:alvin_smith wdt:cause_of_death ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2579",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q4738229 wdt:P509 ?x. }"
+    },
+    {
+        "input": "Query: what are the four harry potter house names?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:hogwarts_house. } LIMIT 4",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2580",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31 wd:Q933971. } LIMIT 4"
+    },
+    {
+        "input": "Query: who has tim howard played for?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:tim_howard wdt:member_of_sports_team ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2581",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q200785 wdt:P54 ?x. }"
+    },
+    {
+        "input": "Query: when is the gold cup cheltenham?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:gold_cup wdt:start_time ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2582",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q11317814 wdt:P580 ?x. }"
+    },
+    {
+        "input": "Query: where does portuguese originate?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:portuguese wdt:subclass_of ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2583",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q5146 wdt:P279 ?x. }"
+    },
+    {
+        "input": "Query: what currency in dominican republic should i bring?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:dominican_republic wdt:currency ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2584",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q786 wdt:P38 ?x. }"
+    },
+    {
+        "input": "Query: who did howie long married?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:howie_long wdt:spouse ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2585",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q962794 wdt:P26 ?x. }"
+    },
+    {
+        "input": "Query: what region of the world is north america in?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:north_america wdt:located_in/on_physical_feature ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2586",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q49 wdt:P706 ?x. }"
+    },
+    {
+        "input": "Query: who is the current governor of georgia?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:georgia wdt:head_of_government ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2587",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q739 wdt:P6 ?x. }"
+    },
+    {
+        "input": "Query: what instrument does ringo starr play?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:ringo_starr wdt:instrument ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2590",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q2632 wdt:P1303 ?x. }"
+    },
+    {
+        "input": "Query: what character did stan lee create?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:creator wd:stan_lee. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2592",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P170 wd:Q181900. }"
+    },
+    {
+        "input": "Query: who did mario lopez just marry?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:mario_lopez wdt:spouse ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2595",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q372559 wdt:P26 ?x. }"
+    },
+    {
+        "input": "Query: what happened to president james garfield?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:james_garfield wdt:cause_of_death ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2596",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q34597 wdt:P509 ?x. }"
+    },
+    {
+        "input": "Query: what time zone am i in missouri?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:missouri wdt:located_in_time_zone ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2597",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1581 wdt:P421 ?x. }"
+    },
+    {
+        "input": "Query: who is paul mccartney's current wife?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:paul_mccartney wdt:spouse ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2598",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q2599 wdt:P26 ?x. }"
+    },
+    {
+        "input": "Query: what channel is anderson cooper talk show on?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:anderson_cooper wdt:original_broadcaster ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2599",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1982877 wdt:P449 ?x. }"
+    },
+    {
+        "input": "Query: what drugs were in whitney houston when she died?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:whitney_houston wdt:cause_of_death ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2600",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q34389 wdt:P509 ?x. }"
+    },
+    {
+        "input": "Query: who did warren moon play for?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:warren_moon wdt:member_of_sports_team ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2601",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q126710 wdt:P54 ?x. }"
+    },
+    {
+        "input": "Query: what brand of guitar does steve vai play?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:subclass_of* wd:guitar; wdt:used_by wd:steve_vai. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2602",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P279* wd:Q6607; wdt:P1535 wd:Q193397. }"
+    },
+    {
+        "input": "Query: what do hungarian people speak?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:hungary wdt:official_language ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2603",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q28 wdt:P37 ?x. }"
+    },
+    {
+        "input": "Query: what prep school did romney attend?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:romney wdt:educated_at ?x. ?x wdt:instance_of/wdt:subclass_of* wd:preparatory_school. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2604",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q4496 wdt:P69 ?x. ?x wdt:P31/wdt:P279* wd:Q4367464. }"
+    },
+    {
+        "input": "Query: in what town did ned kelly and his family grow up?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:ned_kelly wdt:place_of_birth ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2605",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q301816 wdt:P19 ?x. }"
+    },
+    {
+        "input": "Query: what is bethenny frankel husband name?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:bethenny_frankel wdt:spouse ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2606",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q4492369 wdt:P26 ?x. }"
+    },
+    {
+        "input": "Query: who is the present president of china?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:of_china wdt:head_of_government ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2608",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q148 wdt:P6 ?x. }"
+    },
+    {
+        "input": "Query: who speaks stewie on family guy?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:family_guy p:voice_actor ?p. ?p ps:voice_actor ?x; pq:character_role wd:stewie. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2609",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q5930 p:P725 ?p. ?p ps:P725 ?x; pq:P453 wd:Q837909. }"
+    },
+    {
+        "input": "Query: who influenced arthur conan doyle?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:arthur_conan_doyle wdt:influenced_by ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2610",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q35610 wdt:P737 ?x. }"
+    },
+    {
+        "input": "Query: when was samuel pepys?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:samuel_pepys wdt:country_of_citizenship ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2611",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q106143 wdt:P27 ?x. }"
+    },
+    {
+        "input": "Query: what type of money does jamaica use?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:jamaica wdt:currency ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2614",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q766 wdt:P38 ?x. }"
+    },
+    {
+        "input": "Query: what instrument does fela kuti play?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:fela_kuti wdt:instrument ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2615",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q313868 wdt:P1303 ?x. }"
+    },
+    {
+        "input": "Query: who is kurt busch driving for now?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:kurt_busch wdt:member_of_sports_team ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2616",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q201820 wdt:P54 ?x. }"
+    },
+    {
+        "input": "Query: who was charlemagne's wife?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:charlemagne wdt:spouse ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2617",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q3044 wdt:P26 ?x. }"
+    },
+    {
+        "input": "Query: where did woodrow wilson go to school?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:woodrow_wilson wdt:educated_at ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2618",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q34296 wdt:P69 ?x. }"
+    },
+    {
+        "input": "Query: who is lamar odom married too?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:lamar_odom wdt:spouse ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2619",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q296403 wdt:P26 ?x. }"
+    },
+    {
+        "input": "Query: who is angelina jolie's husband?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:angelina_jolie wdt:spouse ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2621",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q13909 wdt:P26 ?x. }"
+    },
+    {
+        "input": "Query: what kind of money do they use in aruba?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:aruba wdt:currency ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2622",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q21203 wdt:P38 ?x. }"
+    },
+    {
+        "input": "Query: what wars did robert e lee lead?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:robert wdt:conflict ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2624",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q165557 wdt:P607 ?x. }"
+    },
+    {
+        "input": "Query: where did tennessee williams live?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:tennessee_williams wdt:residence ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2626",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q134262 wdt:P551 ?x. }"
+    },
+    {
+        "input": "Query: what was king louis xiv religion?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:louis_xiv wdt:religion_or_worldview ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2627",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q7742 wdt:P140 ?x. }"
+    },
+    {
+        "input": "Query: what language do they in belgium?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:belgium wdt:official_language ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2628",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q31 wdt:P37 ?x. }"
+    },
+    {
+        "input": "Query: who plays walter in fringe?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:fringe p:cast_member ?p. ?p ps:cast_member ?x; pq:character_role wd:walter. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2629",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q3815 p:P161 ?p. ?p ps:P161 ?x; pq:P453 wd:Q2720022. }"
+    },
+    {
+        "input": "Query: where is port st lucie florida on the map?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:port wdt:coordinate_location ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2630",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q667749 wdt:P625 ?x. }"
+    },
+    {
+        "input": "Query: what countries are the mediterranean?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:mediterranean wdt:country ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2631",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q4918 wdt:P17 ?x. }"
+    },
+    {
+        "input": "Query: what city has the largest population in mexico?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:city; wdt:country wd:mexico; wdt:population ?y. } ORDER BY DESC (?y) LIMIT 1",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2632",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31 wd:Q515; wdt:P17 wd:Q96; wdt:P1082 ?y. } ORDER BY DESC (?y) LIMIT 1"
+    },
+    {
+        "input": "Query: who juan ponce de leon?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:juan_ponce_de wdt:occupation ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2633",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q185974 wdt:P106 ?x. }"
+    },
+    {
+        "input": "Query: in what years did the new york yankees win the world series?",
+        "output": "SELECT DISTINCT ?x WHERE { ?y wdt:sports_season_of_league_or_competition wd:world_series; wdt:winner wd:new_york_yankees; wdt:point_in_time ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2634",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?y wdt:P3450 wd:Q265538; wdt:P1346 wd:Q213417; wdt:P585 ?x. }"
+    },
+    {
+        "input": "Query: what state is toronto in?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:toronto wdt:located_in_the_administrative_territorial_entity+ ?x. ?x wdt:instance_of/wdt:subclass_of* wd:federated_state. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2635",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q172 wdt:P131+ ?x. ?x wdt:P31/wdt:P279* wd:Q107390. }"
+    },
+    {
+        "input": "Query: where did the loma prieta earthquake occur?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:loma_prieta_earthquake wdt:located_in_the_administrative_territorial_entity ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2637",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1053476 wdt:P131 ?x. }"
+    },
+    {
+        "input": "Query: what is the state motto of massachusetts?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:massachusetts wdt:motto ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2638",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q771 wdt:P1546 ?x. }"
+    },
+    {
+        "input": "Query: what is time zone in new orleans?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:new_orleans wdt:located_in_time_zone ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2639",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q34404 wdt:P421 ?x. }"
+    },
+    {
+        "input": "Query: what type of poetry does john donne write?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:john_donne wdt:genre ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2640",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q140412 wdt:P136 ?x. }"
+    },
+    {
+        "input": "Query: where did helen keller die?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:helen_keller wdt:place_of_death ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2641",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q38203 wdt:P20 ?x. }"
+    },
+    {
+        "input": "Query: who is the current president of chile?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:chile wdt:head_of_government ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2642",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q298 wdt:P6 ?x. }"
+    },
+    {
+        "input": "Query: where did johann sebastian bach live?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:johann_sebastian_bach wdt:residence ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2646",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1339 wdt:P551 ?x. }"
+    },
+    {
+        "input": "Query: what timezone is malaysia?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:malaysia wdt:located_in_time_zone ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2648",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q833 wdt:P421 ?x. }"
+    },
+    {
+        "input": "Query: where is alex smith from?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:alex_smith wdt:place_of_birth ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2649",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q717897 wdt:P19 ?x. }"
+    },
+    {
+        "input": "Query: where was alice walker born?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:alice_walker wdt:place_of_birth ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2650",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q215868 wdt:P19 ?x. }"
+    },
+    {
+        "input": "Query: what do they speak iceland?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:iceland wdt:official_language ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2651",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q189 wdt:P37 ?x. }"
+    },
+    {
+        "input": "Query: what wars have france been involved in?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:war; wdt:participant wd:france. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2653",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31 wd:Q198; wdt:P710 wd:Q142. }"
+    },
+    {
+        "input": "Query: who plays moira on the l word?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:the_l_word p:cast_member ?p. ?p ps:cast_member ?x; pq:character_role wd:moira. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2654",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q216792 p:P161 ?p. ?p ps:P161 ?x; pq:P453 wd:Q3319244. }"
+    },
+    {
+        "input": "Query: when did joe mcelderry won x factor?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:part_of_the_series wd:x_factor; wdt:winner wd:joe_mcelderry. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2655",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P179 wd:Q4431988; wdt:P1346 wd:Q350368. }"
+    },
+    {
+        "input": "Query: what is the major language of jamaica?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:jamaica wdt:official_language ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2656",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q766 wdt:P37 ?x. }"
+    },
+    {
+        "input": "Query: who was the members of blackstreet?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:blackstreet wdt:has_part(s) ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2657",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q222517 wdt:P527 ?x. }"
+    },
+    {
+        "input": "Query: who created the character of sherlock holmes?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:sherlock_holmes wdt:creator ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2661",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q4653 wdt:P170 ?x. }"
+    },
+    {
+        "input": "Query: what does scottish people speak?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:scottish wdt:official_language ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2662",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q22 wdt:P37 ?x. }"
+    },
+    {
+        "input": "Query: who all has kim kardashian dated?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:kim_kardashian wdt:unmarried_partner|wdt:spouse ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2663",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q186304 wdt:P451|wdt:P26 ?x. }"
+    },
+    {
+        "input": "Query: what book did john steinbeck wrote about the people in the dust bowl?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:author wd:john_steinbeck; wdt:set_in_period wd:dust_bowl. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2666",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P50 wd:Q39212; wdt:P2408 wd:Q726501. }"
+    },
+    {
+        "input": "Query: who is the voice of family guys meg griffin?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:family_guy p:voice_actor ?p. ?p ps:voice_actor ?x; pq:character_role wd:meg_griffin. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2668",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q5930 p:P725 ?p. ?p ps:P725 ?x; pq:P453 wd:Q908772. }"
+    },
+    {
+        "input": "Query: what kind of currency does jamaica use?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:jamaica wdt:currency ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2672",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q766 wdt:P38 ?x. }"
+    },
+    {
+        "input": "Query: what type of government does the nigeria have?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:nigeria wdt:basic_form_of_government ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2673",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1033 wdt:P122 ?x. }"
+    },
+    {
+        "input": "Query: where is usc from?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:usc wdt:located_in_the_administrative_territorial_entity ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2674",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1024426 wdt:P131 ?x. }"
+    },
+    {
+        "input": "Query: what country was william shakespeare born?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:william_shakespeare wdt:place_of_birth ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2675",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q692 wdt:P19 ?x. }"
+    },
+    {
+        "input": "Query: where great britain on the world map?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:great_britain wdt:coordinate_location ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2677",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q23666 wdt:P625 ?x. }"
+    },
+    {
+        "input": "Query: what to see in dallas tx?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:tourist_attraction; wdt:located_in_the_administrative_territorial_entity wd:dallas. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2678",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31/wdt:P279* wd:Q570116; wdt:P131 wd:Q16557. }"
+    },
+    {
+        "input": "Query: what is my timezone in california?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:california wdt:located_in_time_zone ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2679",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q99 wdt:P421 ?x. }"
+    },
+    {
+        "input": "Query: what is president abraham lincoln known for?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:abraham_lincoln wdt:occupation ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2680",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q91 wdt:P106 ?x. }"
+    },
+    {
+        "input": "Query: who does jemaine clement play in despicable me?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:despicable_me p:copyright_license ?p. ?p ps:copyright_license wd:jemaine_clement; pq:character_role ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2682",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q4447 p:P275 ?p. ?p ps:P275 wd:Q439315; pq:P453 ?x. }"
+    },
+    {
+        "input": "Query: what year did the vietnam war happen?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:vietnam_war wdt:start_time ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2683",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q8740 wdt:P580 ?x. }"
+    },
+    {
+        "input": "Query: where do the broncos play?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:broncos wdt:home_venue ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2684",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q223507 wdt:P115 ?x. }"
+    },
+    {
+        "input": "Query: who inspired antonio vivaldi?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:influenced_by wd:antonio_vivaldi. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2685",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P737 wd:Q1340. }"
+    },
+    {
+        "input": "Query: what type of currency is used in puerto rico?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:puerto_rico wdt:currency ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2686",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1183 wdt:P38 ?x. }"
+    },
+    {
+        "input": "Query: what is jackie kennedy famous for?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:kennedy wdt:notable_work ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2687",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q165421 wdt:P800 ?x. }"
+    },
+    {
+        "input": "Query: what currency is used in france before euro?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:france p:currency ?p. ?p ps:currency ?x; pq:start_time ?y; pq:end_time ?z. wd:france p:currency ?q. ?q ps:currency wd:euro; pq:start_time ?w. FILTER((?y < ?w) || (?z <= ?w)) }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2688",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q142 p:P38 ?p. ?p ps:P38 ?x; pq:P580 ?y; pq:P582 ?z. wd:Q142 p:P38 ?q. ?q ps:P38 wd:Q4916; pq:P580 ?w. FILTER((?y < ?w) || (?z <= ?w)) }"
+    },
+    {
+        "input": "Query: who started up mcdonalds?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:mcdonalds wdt:founded_by ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2689",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q38076 wdt:P112 ?x. }"
+    },
+    {
+        "input": "Query: what major landforms are located in egypt?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:landform; wdt:country wd:egypt. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2690",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31/wdt:P279* wd:Q271669; wdt:P17 wd:Q79. }"
+    },
+    {
+        "input": "Query: what state was ronald reagan governor of?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:ronald_reagan p:position_held ?p. ?p ps:position_held ?y. ?y wdt:subclass_of wd:governor; wdt:applies_to_jurisdiction ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2693",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q9960 p:P39 ?p. ?p ps:P39 ?y. ?y wdt:P279 wd:Q889821; wdt:P1001 ?x. }"
+    },
+    {
+        "input": "Query: what is the most practiced religion in the united states?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:united_states wdt:religion_or_worldview ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2694",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q30 wdt:P140 ?x. }"
+    },
+    {
+        "input": "Query: what is st james palace?",
+        "output": "SELECT DISTINCT ?x WHERE { SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". wd:st schema:description ?x. } }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2697",
+        "sparql": "SELECT DISTINCT ?x WHERE { SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". wd:Q272162 schema:description ?x. } }"
+    },
+    {
+        "input": "Query: what airport to fly into to get to clearwater florida?",
+        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:airport; wdt:located_in_the_administrative_territorial_entity wd:clearwater. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2698",
+        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31/wdt:P279* wd:Q1248784; wdt:P131 wd:Q244146. }"
+    },
+    {
+        "input": "Query: who has britney spears married?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:britney_spears wdt:spouse ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2699",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q11975 wdt:P26 ?x. }"
+    },
+    {
+        "input": "Query: what currency is used in hungary?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:hungary wdt:currency ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2700",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q28 wdt:P38 ?x. }"
+    },
+    {
+        "input": "Query: what currency do they use in qatar?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:qatar wdt:currency ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2701",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q846 wdt:P38 ?x. }"
     },
     {
         "input": "Query: what are fun things to do in denver colorado?",
@@ -13991,13 +14712,6 @@
         "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
         "id": "WebQTrn-2708",
         "sparql": "SELECT DISTINCT ?x WHERE { wd:Q704008 wdt:P54 ?x. }"
-    },
-    {
-        "input": "Query: what timezone is minnesota in?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:minnesota wdt:located_in_time_zone ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2900",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1527 wdt:P421 ?x. }"
     },
     {
         "input": "Query: where are the florida marlins from?",
@@ -15006,6 +15720,13 @@
         "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
         "id": "WebQTrn-2899",
         "sparql": "SELECT DISTINCT ?x WHERE { ?y wdt:P31/wdt:P279* wd:Q32096; wdt:P1346 wd:Q223243; wdt:P585 ?x. }"
+    },
+    {
+        "input": "Query: what timezone is minnesota in?",
+        "output": "SELECT DISTINCT ?x WHERE { wd:minnesota wdt:located_in_time_zone ?x. }",
+        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
+        "id": "WebQTrn-2900",
+        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1527 wdt:P421 ?x. }"
     },
     {
         "input": "Query: what country columbus was born?",
@@ -16294,726 +17015,5 @@
         "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
         "id": "WebQTrn-3128",
         "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1297 wdt:P281 ?x. }"
-    },
-    {
-        "input": "Query: what are some of the awards taylor swift has won?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:taylor_swift wdt:award_received ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2561",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q26876 wdt:P166 ?x. }"
-    },
-    {
-        "input": "Query: where did chris cuomo go?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:cuomo wdt:educated_at ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2563",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q11673 wdt:P69 ?x. }"
-    },
-    {
-        "input": "Query: where did gary coleman live when he died?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:gary_coleman wdt:place_of_death ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2564",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q313367 wdt:P20 ?x. }"
-    },
-    {
-        "input": "Query: what is there to do in palm springs?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:tourist_attraction; wdt:located_in_the_administrative_territorial_entity wd:palm_springs. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2565",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31/wdt:P279* wd:Q570116; wdt:P131 wd:Q488004. }"
-    },
-    {
-        "input": "Query: where is auburn university at?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:auburn_university wdt:located_in_the_administrative_territorial_entity ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2566",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q540672 wdt:P131 ?x. }"
-    },
-    {
-        "input": "Query: where was ronald reagan born and raised?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:ronald_reagan wdt:place_of_birth ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2567",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q9960 wdt:P19 ?x. }"
-    },
-    {
-        "input": "Query: what county is morristown tn in?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:morristown wdt:located_in_the_administrative_territorial_entity ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2568",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q962499 wdt:P131 ?x. }"
-    },
-    {
-        "input": "Query: where do the houston rockets play basketball?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:houston_rockets wdt:home_venue ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2569",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q161345 wdt:P115 ?x. }"
-    },
-    {
-        "input": "Query: who was the president of the united states during ww2?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x p:position_held ?p. ?p ps:position_held wd:president_of_the_united_states; pq:start_time ?y. wd:world_war_ii wdt:start_time ?w; wdt:end_time ?v. FILTER(((?y >= ?w) && (?y <= ?v))) }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2570",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x p:P39 ?p. ?p ps:P39 wd:Q11696; pq:P580 ?y. wd:Q362 wdt:P580 ?w; wdt:P582 ?v. FILTER(((?y >= ?w) && (?y <= ?v))) }"
-    },
-    {
-        "input": "Query: which states does the connecticut river flow through?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:connecticut_river wdt:located_in_the_administrative_territorial_entity+ ?x. ?x wdt:instance_of/wdt:subclass_of* wd:federated_state. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2572",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q379648 wdt:P131+ ?x. ?x wdt:P31/wdt:P279* wd:Q107390. }"
-    },
-    {
-        "input": "Query: what are the biggest cities in illinois?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:city; wdt:located_in_the_administrative_territorial_entity+ wd:illinois; wdt:population ?y. } ORDER BY DESC (?y) LIMIT 1",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2573",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31/wdt:P279* wd:Q515; wdt:P131+ wd:Q1204; wdt:P1082 ?y. } ORDER BY DESC (?y) LIMIT 1"
-    },
-    {
-        "input": "Query: which province in canada is the most populated?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:province_of_canada; wdt:population ?y. } ORDER BY DESC (?y) LIMIT 1",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2575",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31 wd:Q11828004; wdt:P1082 ?y. } ORDER BY DESC (?y) LIMIT 1"
-    },
-    {
-        "input": "Query: what continent do the falkland islands belong to?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:falkland_islands wdt:continent ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2576",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q9648 wdt:P30 ?x. }"
-    },
-    {
-        "input": "Query: what language do russian people speak?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:russia wdt:official_language ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2577",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q159 wdt:P37 ?x. }"
-    },
-    {
-        "input": "Query: what did alvin smith died from?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:alvin_smith wdt:cause_of_death ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2579",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q4738229 wdt:P509 ?x. }"
-    },
-    {
-        "input": "Query: what are the four harry potter house names?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:hogwarts_house. } LIMIT 4",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2580",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31 wd:Q933971. } LIMIT 4"
-    },
-    {
-        "input": "Query: who has tim howard played for?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:tim_howard wdt:member_of_sports_team ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2581",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q200785 wdt:P54 ?x. }"
-    },
-    {
-        "input": "Query: when is the gold cup cheltenham?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:gold_cup wdt:start_time ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2582",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q11317814 wdt:P580 ?x. }"
-    },
-    {
-        "input": "Query: where does portuguese originate?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:portuguese wdt:subclass_of ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2583",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q5146 wdt:P279 ?x. }"
-    },
-    {
-        "input": "Query: what currency in dominican republic should i bring?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:dominican_republic wdt:currency ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2584",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q786 wdt:P38 ?x. }"
-    },
-    {
-        "input": "Query: who did howie long married?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:howie_long wdt:spouse ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2585",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q962794 wdt:P26 ?x. }"
-    },
-    {
-        "input": "Query: what region of the world is north america in?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:north_america wdt:located_in/on_physical_feature ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2586",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q49 wdt:P706 ?x. }"
-    },
-    {
-        "input": "Query: who is the current governor of georgia?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:georgia wdt:head_of_government ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2587",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q739 wdt:P6 ?x. }"
-    },
-    {
-        "input": "Query: what instrument does ringo starr play?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:ringo_starr wdt:instrument ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2590",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q2632 wdt:P1303 ?x. }"
-    },
-    {
-        "input": "Query: what character did stan lee create?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:creator wd:stan_lee. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2592",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P170 wd:Q181900. }"
-    },
-    {
-        "input": "Query: who did mario lopez just marry?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:mario_lopez wdt:spouse ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2595",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q372559 wdt:P26 ?x. }"
-    },
-    {
-        "input": "Query: what happened to president james garfield?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:james_garfield wdt:cause_of_death ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2596",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q34597 wdt:P509 ?x. }"
-    },
-    {
-        "input": "Query: what time zone am i in missouri?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:missouri wdt:located_in_time_zone ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2597",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1581 wdt:P421 ?x. }"
-    },
-    {
-        "input": "Query: who is paul mccartney's current wife?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:paul_mccartney wdt:spouse ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2598",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q2599 wdt:P26 ?x. }"
-    },
-    {
-        "input": "Query: what channel is anderson cooper talk show on?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:anderson_cooper wdt:original_broadcaster ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2599",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1982877 wdt:P449 ?x. }"
-    },
-    {
-        "input": "Query: what drugs were in whitney houston when she died?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:whitney_houston wdt:cause_of_death ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2600",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q34389 wdt:P509 ?x. }"
-    },
-    {
-        "input": "Query: who did warren moon play for?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:warren_moon wdt:member_of_sports_team ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2601",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q126710 wdt:P54 ?x. }"
-    },
-    {
-        "input": "Query: what brand of guitar does steve vai play?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:subclass_of* wd:guitar; wdt:used_by wd:steve_vai. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2602",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P279* wd:Q6607; wdt:P1535 wd:Q193397. }"
-    },
-    {
-        "input": "Query: what do hungarian people speak?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:hungary wdt:official_language ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2603",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q28 wdt:P37 ?x. }"
-    },
-    {
-        "input": "Query: what prep school did romney attend?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:romney wdt:educated_at ?x. ?x wdt:instance_of/wdt:subclass_of* wd:preparatory_school. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2604",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q4496 wdt:P69 ?x. ?x wdt:P31/wdt:P279* wd:Q4367464. }"
-    },
-    {
-        "input": "Query: in what town did ned kelly and his family grow up?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:ned_kelly wdt:place_of_birth ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2605",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q301816 wdt:P19 ?x. }"
-    },
-    {
-        "input": "Query: what is bethenny frankel husband name?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:bethenny_frankel wdt:spouse ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2606",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q4492369 wdt:P26 ?x. }"
-    },
-    {
-        "input": "Query: who is the present president of china?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:of_china wdt:head_of_government ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2608",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q148 wdt:P6 ?x. }"
-    },
-    {
-        "input": "Query: who speaks stewie on family guy?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:family_guy p:voice_actor ?p. ?p ps:voice_actor ?x; pq:character_role wd:stewie. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2609",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q5930 p:P725 ?p. ?p ps:P725 ?x; pq:P453 wd:Q837909. }"
-    },
-    {
-        "input": "Query: who influenced arthur conan doyle?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:arthur_conan_doyle wdt:influenced_by ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2610",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q35610 wdt:P737 ?x. }"
-    },
-    {
-        "input": "Query: when was samuel pepys?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:samuel_pepys wdt:country_of_citizenship ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2611",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q106143 wdt:P27 ?x. }"
-    },
-    {
-        "input": "Query: what type of money does jamaica use?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:jamaica wdt:currency ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2614",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q766 wdt:P38 ?x. }"
-    },
-    {
-        "input": "Query: what instrument does fela kuti play?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:fela_kuti wdt:instrument ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2615",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q313868 wdt:P1303 ?x. }"
-    },
-    {
-        "input": "Query: who is kurt busch driving for now?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:kurt_busch wdt:member_of_sports_team ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2616",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q201820 wdt:P54 ?x. }"
-    },
-    {
-        "input": "Query: who was charlemagne's wife?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:charlemagne wdt:spouse ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2617",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q3044 wdt:P26 ?x. }"
-    },
-    {
-        "input": "Query: where did woodrow wilson go to school?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:woodrow_wilson wdt:educated_at ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2618",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q34296 wdt:P69 ?x. }"
-    },
-    {
-        "input": "Query: who is lamar odom married too?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:lamar_odom wdt:spouse ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2619",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q296403 wdt:P26 ?x. }"
-    },
-    {
-        "input": "Query: who is angelina jolie's husband?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:angelina_jolie wdt:spouse ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2621",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q13909 wdt:P26 ?x. }"
-    },
-    {
-        "input": "Query: what kind of money do they use in aruba?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:aruba wdt:currency ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2622",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q21203 wdt:P38 ?x. }"
-    },
-    {
-        "input": "Query: what wars did robert e lee lead?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:robert wdt:conflict ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2624",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q165557 wdt:P607 ?x. }"
-    },
-    {
-        "input": "Query: where did tennessee williams live?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:tennessee_williams wdt:residence ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2626",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q134262 wdt:P551 ?x. }"
-    },
-    {
-        "input": "Query: what was king louis xiv religion?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:louis_xiv wdt:religion_or_worldview ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2627",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q7742 wdt:P140 ?x. }"
-    },
-    {
-        "input": "Query: what language do they in belgium?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:belgium wdt:official_language ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2628",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q31 wdt:P37 ?x. }"
-    },
-    {
-        "input": "Query: who plays walter in fringe?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:fringe p:cast_member ?p. ?p ps:cast_member ?x; pq:character_role wd:walter. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2629",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q3815 p:P161 ?p. ?p ps:P161 ?x; pq:P453 wd:Q2720022. }"
-    },
-    {
-        "input": "Query: where is port st lucie florida on the map?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:port wdt:coordinate_location ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2630",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q667749 wdt:P625 ?x. }"
-    },
-    {
-        "input": "Query: what countries are the mediterranean?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:mediterranean wdt:country ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2631",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q4918 wdt:P17 ?x. }"
-    },
-    {
-        "input": "Query: what city has the largest population in mexico?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:city; wdt:country wd:mexico; wdt:population ?y. } ORDER BY DESC (?y) LIMIT 1",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2632",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31 wd:Q515; wdt:P17 wd:Q96; wdt:P1082 ?y. } ORDER BY DESC (?y) LIMIT 1"
-    },
-    {
-        "input": "Query: who juan ponce de leon?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:juan_ponce_de wdt:occupation ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2633",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q185974 wdt:P106 ?x. }"
-    },
-    {
-        "input": "Query: in what years did the new york yankees win the world series?",
-        "output": "SELECT DISTINCT ?x WHERE { ?y wdt:sports_season_of_league_or_competition wd:world_series; wdt:winner wd:new_york_yankees; wdt:point_in_time ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2634",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?y wdt:P3450 wd:Q265538; wdt:P1346 wd:Q213417; wdt:P585 ?x. }"
-    },
-    {
-        "input": "Query: what state is toronto in?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:toronto wdt:located_in_the_administrative_territorial_entity+ ?x. ?x wdt:instance_of/wdt:subclass_of* wd:federated_state. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2635",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q172 wdt:P131+ ?x. ?x wdt:P31/wdt:P279* wd:Q107390. }"
-    },
-    {
-        "input": "Query: where did the loma prieta earthquake occur?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:loma_prieta_earthquake wdt:located_in_the_administrative_territorial_entity ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2637",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1053476 wdt:P131 ?x. }"
-    },
-    {
-        "input": "Query: what is the state motto of massachusetts?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:massachusetts wdt:motto ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2638",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q771 wdt:P1546 ?x. }"
-    },
-    {
-        "input": "Query: what is time zone in new orleans?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:new_orleans wdt:located_in_time_zone ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2639",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q34404 wdt:P421 ?x. }"
-    },
-    {
-        "input": "Query: what type of poetry does john donne write?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:john_donne wdt:genre ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2640",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q140412 wdt:P136 ?x. }"
-    },
-    {
-        "input": "Query: where did helen keller die?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:helen_keller wdt:place_of_death ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2641",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q38203 wdt:P20 ?x. }"
-    },
-    {
-        "input": "Query: who is the current president of chile?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:chile wdt:head_of_government ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2642",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q298 wdt:P6 ?x. }"
-    },
-    {
-        "input": "Query: where did johann sebastian bach live?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:johann_sebastian_bach wdt:residence ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2646",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1339 wdt:P551 ?x. }"
-    },
-    {
-        "input": "Query: what timezone is malaysia?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:malaysia wdt:located_in_time_zone ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2648",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q833 wdt:P421 ?x. }"
-    },
-    {
-        "input": "Query: where is alex smith from?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:alex_smith wdt:place_of_birth ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2649",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q717897 wdt:P19 ?x. }"
-    },
-    {
-        "input": "Query: where was alice walker born?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:alice_walker wdt:place_of_birth ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2650",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q215868 wdt:P19 ?x. }"
-    },
-    {
-        "input": "Query: what do they speak iceland?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:iceland wdt:official_language ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2651",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q189 wdt:P37 ?x. }"
-    },
-    {
-        "input": "Query: what wars have france been involved in?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:war; wdt:participant wd:france. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2653",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31 wd:Q198; wdt:P710 wd:Q142. }"
-    },
-    {
-        "input": "Query: who plays moira on the l word?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:the_l_word p:cast_member ?p. ?p ps:cast_member ?x; pq:character_role wd:moira. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2654",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q216792 p:P161 ?p. ?p ps:P161 ?x; pq:P453 wd:Q3319244. }"
-    },
-    {
-        "input": "Query: when did joe mcelderry won x factor?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:part_of_the_series wd:x_factor; wdt:winner wd:joe_mcelderry. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2655",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P179 wd:Q4431988; wdt:P1346 wd:Q350368. }"
-    },
-    {
-        "input": "Query: what is the major language of jamaica?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:jamaica wdt:official_language ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2656",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q766 wdt:P37 ?x. }"
-    },
-    {
-        "input": "Query: who was the members of blackstreet?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:blackstreet wdt:has_part(s) ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2657",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q222517 wdt:P527 ?x. }"
-    },
-    {
-        "input": "Query: who created the character of sherlock holmes?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:sherlock_holmes wdt:creator ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2661",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q4653 wdt:P170 ?x. }"
-    },
-    {
-        "input": "Query: what does scottish people speak?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:scottish wdt:official_language ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2662",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q22 wdt:P37 ?x. }"
-    },
-    {
-        "input": "Query: who all has kim kardashian dated?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:kim_kardashian wdt:unmarried_partner|wdt:spouse ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2663",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q186304 wdt:P451|wdt:P26 ?x. }"
-    },
-    {
-        "input": "Query: what book did john steinbeck wrote about the people in the dust bowl?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:author wd:john_steinbeck; wdt:set_in_period wd:dust_bowl. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2666",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P50 wd:Q39212; wdt:P2408 wd:Q726501. }"
-    },
-    {
-        "input": "Query: who is the voice of family guys meg griffin?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:family_guy p:voice_actor ?p. ?p ps:voice_actor ?x; pq:character_role wd:meg_griffin. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2668",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q5930 p:P725 ?p. ?p ps:P725 ?x; pq:P453 wd:Q908772. }"
-    },
-    {
-        "input": "Query: what kind of currency does jamaica use?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:jamaica wdt:currency ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2672",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q766 wdt:P38 ?x. }"
-    },
-    {
-        "input": "Query: what type of government does the nigeria have?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:nigeria wdt:basic_form_of_government ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2673",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1033 wdt:P122 ?x. }"
-    },
-    {
-        "input": "Query: where is usc from?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:usc wdt:located_in_the_administrative_territorial_entity ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2674",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1024426 wdt:P131 ?x. }"
-    },
-    {
-        "input": "Query: what country was william shakespeare born?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:william_shakespeare wdt:place_of_birth ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2675",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q692 wdt:P19 ?x. }"
-    },
-    {
-        "input": "Query: where great britain on the world map?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:great_britain wdt:coordinate_location ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2677",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q23666 wdt:P625 ?x. }"
-    },
-    {
-        "input": "Query: what to see in dallas tx?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:tourist_attraction; wdt:located_in_the_administrative_territorial_entity wd:dallas. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2678",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31/wdt:P279* wd:Q570116; wdt:P131 wd:Q16557. }"
-    },
-    {
-        "input": "Query: what is my timezone in california?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:california wdt:located_in_time_zone ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2679",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q99 wdt:P421 ?x. }"
-    },
-    {
-        "input": "Query: what is president abraham lincoln known for?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:abraham_lincoln wdt:occupation ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2680",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q91 wdt:P106 ?x. }"
-    },
-    {
-        "input": "Query: who does jemaine clement play in despicable me?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:despicable_me p:copyright_license ?p. ?p ps:copyright_license wd:jemaine_clement; pq:character_role ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2682",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q4447 p:P275 ?p. ?p ps:P275 wd:Q439315; pq:P453 ?x. }"
-    },
-    {
-        "input": "Query: what year did the vietnam war happen?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:vietnam_war wdt:start_time ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2683",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q8740 wdt:P580 ?x. }"
-    },
-    {
-        "input": "Query: where do the broncos play?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:broncos wdt:home_venue ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2684",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q223507 wdt:P115 ?x. }"
-    },
-    {
-        "input": "Query: who inspired antonio vivaldi?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:influenced_by wd:antonio_vivaldi. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2685",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P737 wd:Q1340. }"
-    },
-    {
-        "input": "Query: what type of currency is used in puerto rico?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:puerto_rico wdt:currency ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2686",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q1183 wdt:P38 ?x. }"
-    },
-    {
-        "input": "Query: what is jackie kennedy famous for?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:kennedy wdt:notable_work ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2687",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q165421 wdt:P800 ?x. }"
-    },
-    {
-        "input": "Query: what currency is used in france before euro?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:france p:currency ?p. ?p ps:currency ?x; pq:start_time ?y; pq:end_time ?z. wd:france p:currency ?q. ?q ps:currency wd:euro; pq:start_time ?w. FILTER((?y < ?w) || (?z <= ?w)) }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2688",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q142 p:P38 ?p. ?p ps:P38 ?x; pq:P580 ?y; pq:P582 ?z. wd:Q142 p:P38 ?q. ?q ps:P38 wd:Q4916; pq:P580 ?w. FILTER((?y < ?w) || (?z <= ?w)) }"
-    },
-    {
-        "input": "Query: who started up mcdonalds?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:mcdonalds wdt:founded_by ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2689",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q38076 wdt:P112 ?x. }"
-    },
-    {
-        "input": "Query: what major landforms are located in egypt?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:landform; wdt:country wd:egypt. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2690",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31/wdt:P279* wd:Q271669; wdt:P17 wd:Q79. }"
-    },
-    {
-        "input": "Query: what state was ronald reagan governor of?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:ronald_reagan p:position_held ?p. ?p ps:position_held ?y. ?y wdt:subclass_of wd:governor; wdt:applies_to_jurisdiction ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2693",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q9960 p:P39 ?p. ?p ps:P39 ?y. ?y wdt:P279 wd:Q889821; wdt:P1001 ?x. }"
-    },
-    {
-        "input": "Query: what is the most practiced religion in the united states?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:united_states wdt:religion_or_worldview ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2694",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q30 wdt:P140 ?x. }"
-    },
-    {
-        "input": "Query: what is st james palace?",
-        "output": "SELECT DISTINCT ?x WHERE { SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". wd:st schema:description ?x. } }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2697",
-        "sparql": "SELECT DISTINCT ?x WHERE { SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". wd:Q272162 schema:description ?x. } }"
-    },
-    {
-        "input": "Query: what airport to fly into to get to clearwater florida?",
-        "output": "SELECT DISTINCT ?x WHERE { ?x wdt:instance_of/wdt:subclass_of* wd:airport; wdt:located_in_the_administrative_territorial_entity wd:clearwater. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2698",
-        "sparql": "SELECT DISTINCT ?x WHERE { ?x wdt:P31/wdt:P279* wd:Q1248784; wdt:P131 wd:Q244146. }"
-    },
-    {
-        "input": "Query: who has britney spears married?",
-        "output": "SELECT DISTINCT ?x WHERE { wd:britney_spears wdt:spouse ?x. }",
-        "instruction": "Given a Wikidata query, generate the corresponding SPARQL. Use property names instead of PIDs.",
-        "id": "WebQTrn-2699",
-        "sparql": "SELECT DISTINCT ?x WHERE { wd:Q11975 wdt:P26 ?x. }"
     }
 ]
