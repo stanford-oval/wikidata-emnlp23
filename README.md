@@ -1,4 +1,16 @@
-**Note: Repo under development. We have released all data and evaluation code. We are now working on releasing fine-tuned models.**
+<p align="center">
+    <img src="./images/Wikidata-logo-en.svg" width="100px" alt="Wikidata" />
+    <h1 align="center">
+        <b>Seq-to-Seq Semantic Parsing over Wikidata</b>
+        <br>
+        <a href="https://arxiv.org/abs/2305.14202">
+            <img src="https://img.shields.io/badge/cs.CL-2305.14202-b31b1b" alt="arXiv">
+        </a>
+        <a href="https://github.com/stanford-oval/wikidata-emnlp23/stargazers">
+            <img src="https://img.shields.io/github/stars/stanford-oval/wikidata-emnlp23?style=social" alt="Github Stars">
+        </a>
+    </h1>
+</p>
 
 # Repo structure
 
@@ -8,7 +20,27 @@
 
 - Prediction results for all models published in our paper can be found under directory `predicted_results`.
 
-## Model names
+# Published WikiSP (LLaMA) models
+
+Two models in the paper are available on huggingface:
+
+- https://huggingface.co/stanford-oval/llama-7b-wikiwebquestions-qald7: This model is trained on both WikiWebquestions, Qald-7, and the Stanford Alpaca dataset. In the paper, this is the `WikiSP (ours)` model in Section 6 tables.
+
+- https://huggingface.co/stanford-oval/llama-7b-wikiwebquestions: This model is trained on WikiWebquestions and the Stanford Alpaca dataset. In the paper, this is the model in Section 7.
+
+To download these models, you can use:
+
+```
+python -c 'from huggingface_hub import snapshot_download; snapshot_download(repo_id="stanford-oval/llama-7b-wikiwebquestions-qald7", repo_type="model", local_dir="<PATH_TO_LOCAL_DIRECTORY>", local_dir_use_symlinks=False)'
+```
+
+Then, start the server in a separate terminal using [Huggingface's text-generation-inference library](https://github.com/huggingface/text-generation-inference/). We recommend using their provided Docker image given its ease of use. Run:
+
+```
+docker run --gpus all --shm-size 1g -p <port>:80 -v <PATH_TO_LOCAL_DIRECTORY>:/data ghcr.io/huggingface/text-generation-inference:1.3.4 --model-id /data/ --num-shard <number-of-gpus> --max-batch-total-tokens 4096
+```
+
+## Model training data names
 
 The JSON file names correspond to the models in our paper in the following way:
 
