@@ -202,10 +202,17 @@ def compare_results(res1, res2):
     
     res1 = [list(x.values()) for x in res1]
     res2 = [list(x.values()) for x in res2]
-    if (res1 == res2):
-        return True
-    else:
-        return False
+    
+    for res in res1:
+        if res not in res2:
+            return False
+    
+    for res in res2:
+        if res not in res1:
+            return False
+    
+    return True
+
 
 def safe_divide(x, y):
     if x == 0 and y == 0:
