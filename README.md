@@ -24,9 +24,9 @@
 
 Two models in the paper are available on huggingface:
 
-- https://huggingface.co/stanford-oval/llama-7b-wikiwebquestions-qald7: This model is trained on both WikiWebquestions, Qald-7, and the Stanford Alpaca dataset. In the paper, this is the `WikiSP (ours)` model in Section 6 tables.
+- https://huggingface.co/stanford-oval/llama-7b-wikiwebquestions: This model is trained on WikiWebquestions and the Stanford Alpaca dataset. In the paper, this is the `WikiSP (ours)` model in Section 6 tables.
 
-- https://huggingface.co/stanford-oval/llama-7b-wikiwebquestions: This model is trained on WikiWebquestions and the Stanford Alpaca dataset. In the paper, this is the model in Section 7.
+- https://huggingface.co/stanford-oval/llama-7b-wikiwebquestions-qald7: This model is trained on both WikiWebquestions, Qald-7, and the Stanford Alpaca dataset. In the paper, this is the model in Section 7.
 
 To download these models, you can use:
 
