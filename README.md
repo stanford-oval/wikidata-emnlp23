@@ -37,8 +37,9 @@ python -c 'from huggingface_hub import snapshot_download; snapshot_download(repo
 Then, start the server in a separate terminal using [Huggingface's text-generation-inference library](https://github.com/huggingface/text-generation-inference/). We recommend using their provided Docker image given its ease of use. Run:
 
 ```
-docker run --gpus all --shm-size 1g -p <port>:80 -v <PATH_TO_LOCAL_DIRECTORY>:/data ghcr.io/huggingface/text-generation-inference:1.3.4 --model-id /data/ --num-shard <number-of-gpus> --max-batch-total-tokens 4096
+docker run --gpus all --shm-size 1g -p 8700:80 -v <PATH_TO_LOCAL_DIRECTORY>:/data ghcr.io/huggingface/text-generation-inference:1.3.4 --model-id /data/ --num-shard <number-of-gpus> --max-batch-total-tokens 4096
 ```
+(for instance, this would set up a connection on "http://127.0.0.1:8700/" for inference)
 
 ## Model training data names
 
@@ -62,11 +63,12 @@ If running on the test set, also change the second parameter to `"WikiWebQuestio
 
 # Models & Inference
 
-**This section is under development.**
+`evaluate_dev` under `eval.py` specifies how to evaluate our model on the dev set. To inference, first inject `wikidata-emnlp23/WikiWebQuestions/dev.json` into
+a MongoDB (in `eval.py` this corresponds to `webquestion_dev = client["wikidata-eval"]["dev"]`).
 
 ## Running NED model
 
-Download the finetuned ReFiNED model by:
+Then, download the fine-tuned ReFiNED model by:
 
 ```
 pip install https://github.com/amazon-science/ReFinED/archive/refs/tags/V1.zip 
@@ -76,7 +78,11 @@ curl https://almond-static.stanford.edu/research/qald/refined-finetune/model.pt 
 curl https://almond-static.stanford.edu/research/qald/refined-finetune/precomputed_entity_descriptions_emb_wikidata_33831487-300.np -o <your_directory>/precomputed_entity_descriptions_emb_wikidata_33831487-300.np
 ```
 
-and then check out `run_refined.py` for an example of inferencing with it.
+and then run `do_ned_for_dev` under `eval.py` to inference all entities in the dev set (change `/data0/wikidata-workdir/models/refined` there to `<your_directory>`).
+
+## Perform inference
+
+Run `evaluate_dev` to get results on the dev set.
 
 # Citation
 
