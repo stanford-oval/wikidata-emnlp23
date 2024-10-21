@@ -12,6 +12,10 @@
     </h1>
 </p>
 
+# News
+
+🚀 Check out our follow-up work in **Findings of EMNLP 2024** ([paper](https://arxiv.org/abs/2407.11417)) at [repo](https://github.com/stanford-oval/spinach). You can also interact with the online agent [here](https://spinach.genie.stanford.edu/).
+
 # Repo structure
 
 - The WikiWebQuestions dataset can be found under directory `WikiWebQuestions`;
