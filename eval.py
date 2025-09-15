@@ -11,7 +11,7 @@ import time
 import multiprocessing
 import re
 from urllib.parse import urlencode
-from location_silei import location_search
+from mention_heuristics import location_search
 
 client = MongoClient("mongodb://localhost:27017/")
 webquestion_dev = client["wikidata-eval"]["dev"]
